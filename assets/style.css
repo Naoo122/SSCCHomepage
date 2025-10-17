@@ -1,1 +1,232 @@
+/* =========================
+   基本設定
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  background: radial-gradient(circle at 20% 30%, #b7f179 0%, transparent 40%),
+              radial-gradient(circle at 80% 20%, #f480d5 0%, transparent 40%),
+              radial-gradient(circle at 50% 70%, #83cde7 0%, transparent 40%),
+              radial-gradient(circle at 30% 80%, #c5b3f4 0%, transparent 40%);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+p {
+  margin: 5vw;
+}
+
+h3 {
+  margin-left: 5vw;
+}
+
+h4 {
+  margin-right: 5vw;
+}
+
+/* =========================
+   ボタンスタイル
+========================= */
+button {
+  width: 20em;
+  height: 3em;
+  padding: 0;
+  font-family: inherit;
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.buttonUnderline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 0 24px;
+  font-size: 15px;
+  color: #222;
+  text-align: center;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  background: transparent;
+}
+
+.buttonUnderline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transform-origin: right top;
+}
+
+@media (any-hover: hover) {
+  .buttonUnderline::after {
+    transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .buttonUnderline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left top;
+    transition: transform 0.4s cubic-bezier(0.9, 0, 0, 1);
+  }
+}
+
+/* =========================
+   レイアウト・セクション
+========================= */
+.Buttons {
+  display: flex;
+  color: white;
+  background-color: #4169e1;
+}
+
+.Greeting {
+  text-align: center;
+}
+
+.About_Us {
+  text-align: left;
+  margin-left: 5vw;
+}
+
+.What_We_Do {
+  text-align: right;
+  margin-right: 5vw;
+}
+
+section {
+  transition: opacity 0.3s ease;
+}
+
+/* =========================
+   ヘッダーとメニュー
+========================= */
+.yokonarabiheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-image: url("0.png");
+  background-size: cover;
+}
+
+header img {
+  display: block;
+  max-width: 70vw;
+  height: auto;
+  cursor: pointer;
+}
+
+.menus {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* ▼ スマホ（768px以下） */
+@media screen and (max-width: 768px) {
+  .Buttons {
+    display: none;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    color: white;
+  }
+}
+
+/* ▼ PC（768px以上）でロゴを中央配置 */
+@media screen and (min-width: 768px) {
+  .yokonarabiheader {
+    justify-content: center;
+    position: relative;
+  }
+
+  header img {
+    margin: 0 auto;
+  }
+}
+
+/* =========================
+   メニュータブ
+========================= */
+.menutab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  background-color: #4169e1;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.menutab.active {
+  height: 100vh;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menutab a {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 5vw;
+  font-size: clamp(16px, 5vw, 28px);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========================
+   フッター
+========================= */
+footer {
+  background-color: navy;
+  background-size: cover;
+  padding: 0 24px;
+  color: white;
+}
+
+/* =========================
+   記事スタイル
+========================= */
+.article {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #6091d3;
+  background: #FFF;
+  border: solid 3px #c3c5c7;
+  border-radius: 10px;
+}
+
+article p {
+  margin: 0;
+  padding: 0;
+}
