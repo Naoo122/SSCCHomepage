@@ -1,10 +1,10 @@
 <header>
   <div class="yokonarabiheader">
-    <div style = "text-align: center;">
-       <img src = "ssccbiglogo.avif" alt = "SSCCのロゴ" onclick = "ToHome()">
+    <div style="text-align: center;">
+      <a href="/"><img src="/images/ssccbiglogo.avif" alt="SSCCのロゴ"></a>
     </div>
     <div class="menus">
-      <div class="menu-icon" id ="menuicon">
+      <div class="menu-icon" id="menuicon">
         <span></span>
         <span></span>
         <span></span>
@@ -12,21 +12,22 @@
     </div>
   </div>
 
-  <div class = "Buttons">
-    <button type = "button" class = "classHome buttonUnderline" onclick ="ToHome()">HOME</button>
-    <button type = "button" class = "classClubDay buttonUnderline" onclick ="ToClubDay()">CLUB'S LIFE</button>
-    <button type = "button" class = "classActivity buttonUnderline" onclick ="ToActivity()">ACTIVITY</button>
-    <button type = "button" class = "classMemberRoom buttonUnderline" onclick ="ToMemberRoom()">PAGE FOR MEMBERS</button>
-  </div>
+  <nav class="Buttons">
+    <a href="/" class="buttonUnderline">HOME</a>
+    <a href="/clubday/" class="buttonUnderline">CLUB'S LIFE</a>
+    <a href="/activity/" class="buttonUnderline">ACTIVITY</a>
+    <a href="/members/" class="buttonUnderline">PAGE FOR MEMBERS</a>
+  </nav>
 </header>
 
 <main>
-  <div class = "menutab" id ="menutab">
-    <a class ="batsu" id = "batsu" onclick="batsu()"><b>×</b></a>
-    <button class = "classHome buttonUnderline" onclick ="ToHome()">HOME</button>
-    <button class ="classClubDay buttonUnderline" onclick ="ToClubDay()">CLUB'S LIFE</button>
-    <button class="classActivity buttonUnderline" onclick ="ToActivity()">ACTIVITY</button>
-    <button class="classMemberRoom buttonUnderline" onclick ="ToMemberRoom()">PAGE FOR MEMBERS</button>
+  <div class="menutab" id="menutab">
+    <a class="batsu" id="batsu"><b>×</b></a>
+    <a href="/" class="buttonUnderline">HOME</a>
+    <a href="/clubday/" class="buttonUnderline">CLUB'S LIFE</a>
+    <a href="/activity/" class="buttonUnderline">ACTIVITY</a>
+    <a href="/members/" class="buttonUnderline">PAGE FOR MEMBERS</a>
   </div>
-  <script src="/assets/script.js"></script>
 </main>
+
+<script src="/assets/script.js"></script>
