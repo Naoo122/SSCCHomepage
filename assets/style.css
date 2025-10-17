@@ -216,7 +216,7 @@ footer {
 /* =========================
    記事スタイル
 ========================= */
-.article {
+.box {
   padding: 0.5em 1em;
   margin: 2em 0;
   font-weight: bold;
@@ -226,7 +226,7 @@ footer {
   border-radius: 10px;
 }
 
-article p {
+box p {
   margin: 0;
   padding: 0;
 }
