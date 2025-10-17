@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 共通ヘッダーとフッターの読み込み
-  fetch("/shared/header.html")
+  fetch("../shared/header.html")
     .then(res => res.text())
     .then(data => document.getElementById("header").innerHTML = data);
 
-  fetch("/shared/footer.html")
+  fetch("../shared/footer.html")
     .then(res => res.text())
     .then(data => document.getElementById("footer").innerHTML = data);
 });
