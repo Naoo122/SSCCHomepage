@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Menutab.classList.remove('active');
     });
   }
-/*
+
   // 共通ヘッダーとフッターの読み込み
   fetch("../shared/header.html")
     .then(res => res.text())
@@ -24,5 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("../shared/footer.html")
     .then(res => res.text())
     .then(data => document.getElementById("footer").innerHTML = data);
-    */
 });
